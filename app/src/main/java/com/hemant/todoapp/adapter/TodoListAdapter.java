@@ -45,14 +45,12 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.TodoTa
     public void onBindViewHolder(@NonNull TodoTaskViewHolder holder, int position) {
         if (mTasks != null) {
             TodoTask current = mTasks.get(position);
-            //set the values here
             holder.titletv.setText(current.getTitle());
             holder.descriptiontv.setText(current.getDescription());
             updateUi(current , holder);
-            //continue from here...
 
-        } else {
-            // Covers the case of data not being ready yet.
+        }
+        else {
             holder.titletv.setText("No Task");
         }
     }
