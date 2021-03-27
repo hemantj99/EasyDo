@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@android:color/white"
+    android:id="@+id/cardView"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginTop="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:minHeight="110dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/titleTV"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingRight="10dp"
+                android:text="this is random title"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:paddingBottom="15dp"
+                android:paddingRight="10dp"
+                android:maxLines="2"
+                android:id="@+id/descriptontv"
+                android:textSize="15sp"
+                android:ellipsize="end"
+                android:text="no description"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:id="@+id/stateCb"
+            android:checked="false"
+            />
+        <LinearLayout
+            android:id="@+id/optionsView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="undo"
+                android:src="@drawable/undo"
+                android:background="@android:color/transparent"
+                android:id="@+id/undoBtn"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_marginLeft="5dp"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:id="@+id/removeBtn"
+                android:background="@android:color/transparent"
+                android:src="@drawable/delete"
+                android:text="remove"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
