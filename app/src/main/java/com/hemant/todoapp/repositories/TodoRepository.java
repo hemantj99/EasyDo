@@ -10,31 +10,31 @@ import com.hemant.todoapp.db.TodoTaskRoomDatabase;
 
 import java.util.List;
 
-public class TodoRepository {
-    private TodoTaskDAO mtodoTaskDao;
-    private LiveData<List<TodoTask>> mallTasks;
+public class TodoRepository{
+    private TodoTaskDAO todoTaskDao;
+    private LiveData<List<TodoTask>> allTasks;
 
-    public TodoRepository(Application application) {
+    public TodoRepository(Application application){
         TodoTaskRoomDatabase db = TodoTaskRoomDatabase.getDatabase(application);
-        mtodoTaskDao = db.todoTaskDAO();
-        mallTasks = mtodoTaskDao.getAllTasks();
+        todoTaskDao = db.todoTaskDAO();
+        allTasks = todoTaskDao.getAllTasks();
     }
-    public LiveData<List<TodoTask>> getAllTasks() {
-        return mallTasks;
+    public LiveData<List<TodoTask>> getAllTasks(){
+        return allTasks;
     }
     public void insert(final TodoTask todoTask) {
         TodoTaskRoomDatabase.databaseWriteExecutor.execute(() -> {
-            mtodoTaskDao.insertTask(todoTask);
+            todoTaskDao.insertTask(todoTask);
         });
     }
     public void delete(final TodoTask todoTask) {
         TodoTaskRoomDatabase.databaseWriteExecutor.execute(() -> {
-            mtodoTaskDao.deleteTask(todoTask);
+            todoTaskDao.deleteTask(todoTask);
         });
     }
     public void update(final TodoTask todoTask) {
         TodoTaskRoomDatabase.databaseWriteExecutor.execute(() -> {
-            mtodoTaskDao.updateTask(todoTask);
+            todoTaskDao.updateTask(todoTask);
         });
     }
 

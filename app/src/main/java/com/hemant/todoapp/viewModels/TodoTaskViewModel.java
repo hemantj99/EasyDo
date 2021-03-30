@@ -12,26 +12,26 @@ import com.hemant.todoapp.db.TodoTask;
 import java.util.List;
 
 public class TodoTaskViewModel extends AndroidViewModel {
-    public TodoRepository mRepository;
-    private LiveData<List<TodoTask>> mallTasks;
+    public TodoRepository repo;
+    private LiveData<List<TodoTask>> allTasks;
 
     public TodoTaskViewModel(@NonNull Application application) {
         super(application);
-        mRepository = new TodoRepository(application);
-        mallTasks = mRepository.getAllTasks();
+        repo = new TodoRepository(application);
+        allTasks = repo.getAllTasks();
     }
-    public LiveData<List<TodoTask>> getAllTasks() {
-        return mallTasks;
+    public LiveData<List<TodoTask>> getAllTasks(){
+        return allTasks;
     }
 
-    public void insert(TodoTask todoTask) {
-        mRepository.insert(todoTask);
+    public void insert(TodoTask todoTask){
+        repo.insert(todoTask);
     }
-    public void delete(TodoTask todoTask) {
-        mRepository.delete(todoTask);
+    public void delete(TodoTask todoTask){
+        repo.delete(todoTask);
     }
-    public void update(TodoTask todoTask) {
-        mRepository.update(todoTask);
+    public void update(TodoTask todoTask){
+        repo.update(todoTask);
     }
 
 }

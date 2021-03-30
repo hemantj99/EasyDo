@@ -30,7 +30,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    public TodoTaskViewModel mtodoTaskViewModel;
+    public TodoTaskViewModel todoTaskViewModel;
     public CoordinatorLayout coordinatorLayout;
     private CardView noitemcv;
 
@@ -45,18 +45,18 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(mtodoListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        mtodoTaskViewModel = new ViewModelProvider(this).get(TodoTaskViewModel.class);
-        mtodoTaskViewModel.getAllTasks().observe(this, new Observer<List<TodoTask>>() {
+        todoTaskViewModel = new ViewModelProvider(this).get(TodoTaskViewModel.class);
+        todoTaskViewModel.getAllTasks().observe(this, new Observer<List<TodoTask>>() {
             @Override
             public void onChanged(List<TodoTask> todoTasks) {
                 mtodoListAdapter.setTaskList(todoTasks);
                 if(todoTasks.size() > 0){
-                    // make dialog disappear
+                    // dialog disappear
                     noitemcv.setVisibility(View.GONE);
                     recyclerView.setVisibility(View.VISIBLE);
                 }
                 else {
-                    // make dialog appear
+                    // dialog appear
                     noitemcv.setVisibility(View.VISIBLE);
                     recyclerView.setVisibility(View.GONE);
                 }
@@ -65,18 +65,18 @@ public class MainActivity extends AppCompatActivity {
         mtodoListAdapter.setOnClickListener(new TodoListAdapter.OnItemClickListener() {
             @Override
             public void onDeleteClick(TodoTask task) {
-                mtodoTaskViewModel.delete(task);
+                todoTaskViewModel.delete(task);
                 Snackbar.make(coordinatorLayout, "Task deleted!",Snackbar.LENGTH_SHORT).show();
             }
             @Override
             public void onUndoClick(TodoTask task) {
-                mtodoTaskViewModel.insert(task);
+                todoTaskViewModel.insert(task);
                 Snackbar.make(coordinatorLayout,"Task marked as Incomplete.",Snackbar.LENGTH_SHORT).show();
             }
 
             @Override
             public void onCheckboxClick(TodoTask task) {
-                mtodoTaskViewModel.insert(task);
+                todoTaskViewModel.insert(task);
                 Snackbar.make(coordinatorLayout,"Great going! Complete rest of them.",Snackbar.LENGTH_SHORT).show();
 
             }
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                     description = "no description";
                 }
                 TodoTask newtodo = new TodoTask(title,false, priority[0],description);
-                mtodoTaskViewModel.insert(newtodo);
+                todoTaskViewModel.insert(newtodo);
                 dialog.dismiss();
                 Snackbar.make(coordinatorLayout,"Task added to your list",Snackbar.LENGTH_SHORT).show();
             }
