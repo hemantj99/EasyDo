@@ -1,4 +1,4 @@
-# ToDo-App
+# EasyDo
 A note taking app, using the Android Architecture Component libraries (Room, ViewModel, LiveData) with RecyclerView and Java following MVVM architecture.
 
 
