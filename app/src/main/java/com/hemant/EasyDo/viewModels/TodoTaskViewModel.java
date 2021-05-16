@@ -1,4 +1,4 @@
-package com.hemant.todoapp.viewModels;
+package com.hemant.EasyDo.viewModels;
 
 import android.app.Application;
 
@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.hemant.todoapp.repositories.TodoRepository;
-import com.hemant.todoapp.db.TodoTask;
+import com.hemant.EasyDo.repositories.TodoRepository;
+import com.hemant.EasyDo.db.TodoTask;
 
 import java.util.List;
 

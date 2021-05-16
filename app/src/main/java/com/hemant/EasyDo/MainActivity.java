@@ -1,4 +1,4 @@
-package com.hemant.todoapp;
+package com.hemant.EasyDo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -20,9 +20,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import com.hemant.todoapp.adapter.TodoListAdapter;
-import com.hemant.todoapp.db.TodoTask;
-import com.hemant.todoapp.viewModels.TodoTaskViewModel;
+import com.hemant.EasyDo.adapter.TodoListAdapter;
+import com.hemant.EasyDo.db.TodoTask;
+import com.hemant.EasyDo.viewModels.TodoTaskViewModel;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 

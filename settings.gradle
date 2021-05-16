@@ -1,2 +1,2 @@
-rootProject.name='ToDo App'
+rootProject.name='EasyDo'
 include ':app'

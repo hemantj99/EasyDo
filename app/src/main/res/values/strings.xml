@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ToDo App</string>
-    <string name="welcomescreen">Welcome to the ToDo App</string>
+    <string name="app_name">EasyDo</string>
+    <string name="welcomescreen">Welcome to EasyDo</string>
     <string name="guide">You don\'t have any pending task.\nTap the <b>+</b> button to create new task.</string>
 </resources>

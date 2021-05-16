@@ -1,4 +1,4 @@
-package com.hemant.todoapp;
+package com.hemant.EasyDo;
 
 import org.junit.Test;
 

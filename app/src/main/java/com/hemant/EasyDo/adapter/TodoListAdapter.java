@@ -1,4 +1,4 @@
-package com.hemant.todoapp.adapter;
+package com.hemant.EasyDo.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -15,8 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hemant.todoapp.R;
-import com.hemant.todoapp.db.TodoTask;
+import com.hemant.EasyDo.R;
+import com.hemant.EasyDo.db.TodoTask;
 
 import java.util.List;
 public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.TodoTaskViewHolder> {

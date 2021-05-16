@@ -1,4 +1,4 @@
-package com.hemant.todoapp.db;
+package com.hemant.EasyDo.db;
 
 import android.content.Context;
 

@@ -1,12 +1,12 @@
-package com.hemant.todoapp.repositories;
+package com.hemant.EasyDo.repositories;
 
 import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
-import com.hemant.todoapp.db.TodoTask;
-import com.hemant.todoapp.db.TodoTaskDAO;
-import com.hemant.todoapp.db.TodoTaskRoomDatabase;
+import com.hemant.EasyDo.db.TodoTask;
+import com.hemant.EasyDo.db.TodoTaskDAO;
+import com.hemant.EasyDo.db.TodoTaskRoomDatabase;
 
 import java.util.List;
 
