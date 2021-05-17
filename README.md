@@ -4,7 +4,7 @@ A note taking app, using the Android Architecture Component libraries (Room, Vie
 
 ## To Run the Application
 
-- Clone this repo: `git clone https://github.com/hemantj99/ToDo-App.git`
+- Clone this repo: `git clone https://github.com/hemantj99/EasyDo.git`
 
 - Open Android Studio and Since the app is developed in Android Studio, you can clone this app repository and import it into your Android Studio. Then either run it with an emulator or on an actual device (what I do). More information on how to do this is availabe [here](https://developer.android.com/studio/run).
 
@@ -14,7 +14,7 @@ A note taking app, using the Android Architecture Component libraries (Room, Vie
 
 - It is very simple, Unpack the download ZIP (from this repository) and open Android studio.
 - Go to File -> New -> Import project and look for the unpacked file in your computer.
-- Application Name: ToDo-App will appear to the users, select it and open it.
+- Application Name: EasyDo will appear to the users, select it and open it.
 - If you try to run, there will be a prompt message to let you know that you need and Create Virtual Device.
 - So do this, From the Your Virtual Devices page of the AVD Manager, click Create Virtual Device.
 - Select a hardware profile, and then click Next.
